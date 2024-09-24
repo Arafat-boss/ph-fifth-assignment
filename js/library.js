@@ -3,3 +3,13 @@ function getInputById(id){
     const inputNumber = parseFloat(inputValues);
     return inputNumber;
 }
+
+function getInputByText(id){
+    const textValue = document.getElementById(id).innerText;
+    const textNumber = parseFloat(textValue);
+    return textNumber;
+}
+
+function calculate (){
+    
+}
