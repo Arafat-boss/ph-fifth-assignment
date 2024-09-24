@@ -10,6 +10,3 @@ function getInputByText(id){
     return textNumber;
 }
 
-function calculate (){
-    
-}

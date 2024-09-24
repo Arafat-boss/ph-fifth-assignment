@@ -31,18 +31,15 @@
             </nav>
         </div>
         <!-- nav section end -->
-        <div class="flex justify-center mt-3 mb-3 gap-3 bg-transparent bg-slate-300">
-            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-orange-500">Donate</button>
-            <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
+        <div class="flex justify-center mb-3 gap-3 bg-green-100 h-16 w-full">
+            <button id="button-donate" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-orange-500">Donate</button>
+            <button id="button-history" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">History</button>
         </div>
     </header>
 
-    <main class="max-w-6xl mx-auto">
-        <!-- button -->
-
-        <!-- --------------------------- -->
+    <main id="donate-section" class="max-w-6xl mx-auto">
         <!--num-01 card section start -->
-        <div class="card lg:card-side bg-base-100 shadow-xl border-2">
+        <div class="card lg:card-side bg-base-100 shadow-xl border-2 mt-4">
             <figure>
                 <img src="assets/noakhali.png" alt="Album" />
             </figure>
@@ -65,14 +62,14 @@
         </div>
         <!-- card section end -->
         <!--num-02 card section start -->
-        <div class="card lg:card-side bg-base-100 shadow-xl border-2">
+        <div class="card lg:card-side bg-base-100 shadow-xl mt-4 border-2">
             <figure>
                 <img src="assets/feni.png" alt="Album" />
             </figure>
             <div class="card-body">
                 <span class=" flex gap-3">
                     <img class="h-4 w-4" src="assets/coin.png" alt="">
-                    <h3 class="font-bold"><span id="total-donate-fani">600</span> BDT</h3>
+                    <h3 class="font-bold"><span id="total-donate-fani">6000</span> BDT</h3>
                 </span>
                 <h2 class="card-title">Donate for Flood Relief in Feni,Bangladesh</h2>
                 <p> The recent floods in Noakhali have caused significant damage to <br>homes infrastructure. Your
@@ -88,30 +85,36 @@
         </div>
         <!-- card section end -->
         <!--num-03 card section start -->
-        <div class="card lg:card-side bg-base-100 shadow-xl border-2">
+        <div class="card lg:card-side bg-base-100 mt-4 shadow-xl border-2">
             <figure>
                 <img src="assets/quota-protest.png" alt="Album" />
             </figure>
             <div class="card-body">
                 <span class=" flex gap-3">
                     <img class="h-4 w-4" src="assets/coin.png" alt="">
-                    <h3 class="font-bold"><span id="total-donate-amount">10000</span> BDT</h3>
+                    <h3 class="font-bold"><span id="total-quata-amount">2000</span> BDT</h3>
                 </span>
                 <h2 class="card-title">Aid for Injured in the Quota Movement</h2>
                 <p> The recent floods in Noakhali have caused significant damage to <br>homes infrastructure. Your
                     donation will help provide essential <br> supplies and to those affected by this disaster. Every
                     contribution, <br> big or small, makes difference. Please join us in supporting the relief <br>
                     efforts and making a positive impact on the lives of those in need..</p>
-                <input id="donate-amount-filed" class="border-2 rounded-md p-3" placeholder="Write Donation Amount"
+                <input id="quta-amount-filed" class="border-2 rounded-md p-3" placeholder="Write Donation Amount"
                     type="text">
 
-                <button id="donate-btn" class="btn btn-primary">Donate Now</button>
+                <button id="quta-btn" class="btn btn-primary">Donate Now</button>
 
             </div>
         </div>
         <!-- card section end -->
     </main>
-    <footer></footer>
+    <!-- ------------------history section------------------------ -->
+    <section id="history-section">
+           
+            <div id="history-container">
+
+            </div>
+    </section>
     <script src="js/library.js"></script>
     <script src="js/addMoney.js"></script>
     <script src="js/decrease-current-balance.js"></script>
