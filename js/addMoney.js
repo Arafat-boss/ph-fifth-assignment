@@ -130,6 +130,18 @@ document.getElementById('button-history')
         document.getElementById('donate-section').classList.add('hidden');
 })
 
+const donateTap = document.getElementById('button-donate');
+const historyTap = document.getElementById('button-history');
+historyTap.addEventListener('click',function(){
+    historyTap.classList.add('btn', 'btn-xs', 'sm:btn-sm', 'md:btn-md', 'lg:btn-lg', 'bg-orange-500');
+
+    donateTap.classList.remove('bg-orange-500');
+})
+donateTap.addEventListener('click',function(){
+    donateTap.classList.add('btn', 'btn-xs', 'sm:btn-sm', 'md:btn-md', 'lg:btn-lg', 'bg-orange-500');
+    historyTap.classList.remove('bg-orange-500');
+})
+
 // ------------------
 document.getElementById('blog-btn').addEventListener('click', function(){
     window.location.href = "./blog.html";
