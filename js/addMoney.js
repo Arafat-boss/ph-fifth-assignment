@@ -5,6 +5,7 @@ document.getElementById('donate-btn')
         const addMoney = getInputById('donate-amount-filed');
         const totalDonate = getInputByText('total-donate-amount');
         const mybalance = getInputByText('my-total-amount');
+        const history1 = document.getElementById('history-container');
         if(isNaN(addMoney)){
             alert('Failed to add money');
             return;
@@ -16,9 +17,24 @@ document.getElementById('donate-btn')
         const newDonateAmount = addMoney + totalDonate;
         document.getElementById('total-donate-amount').innerText = newDonateAmount;
        
-        const p = document.createElement('p');
-        p.innerText = `Added :${addMoney} New Balance : ${newDonateAmount}`;
-        document.getElementById('history-container').appendChild(p);
+    // -----------------------------data-----------------
+    const currentTime = new Date();
+    const date = currentTime.getDate();
+    const month = currentTime.getMonth() + 1;
+    const year = currentTime.getFullYear();
+    // -------------time----------------
+    const time = new Date().toLocaleTimeString();
+
+    const formateDateTime = `
+    Date: ${date}/${month}/${year} Time: ${time}
+    `;
+    history1.innerHTML += `
+    <div class=" text-center border bg-green-200 p-3 rounded-2xl shadow-lg mb-2">
+    <h3 class="text-center text-2xl font-bold">Successfully Donate for Money at Noakhali</h3>
+      <p class=" text-center py-1"> Donate Amount:${addMoney} New Amount:${newDonateAmount}</p>
+      <p>${formateDateTime}</p>
+    </div>
+    `;
 })
 // ------------------------------2----------------------------------------
 
@@ -28,7 +44,7 @@ document.getElementById('donate-btn-fani')
 
         const addMoneyFani = getInputById('donate-amount-filed-fani');
         const totalDonateFani = getInputByText('total-donate-fani');
-        const history = document.getElementById('history-container');
+        const history2 = document.getElementById('history-container');
 
         if(isNaN(addMoneyFani)){
             alert('Failed to add money');
@@ -41,12 +57,6 @@ document.getElementById('donate-btn-fani')
         const newDonateAmountFani = addMoneyFani + totalDonateFani;
         document.getElementById('total-donate-fani').innerText = newDonateAmountFani;
 
-        const div = document.createElement('div');
-        div.classList.add('bg-green-200')
-        div.innerHTML = `
-            <h3 class="text-center text-2xl font-bold">Successfully Added a Money</h3>
-            <p class="text-center">Donate This Money:${addMoneyFani} New Balance: ${newDonateAmountFani}</p>
-        `
     // -----------------------------data-----------------
       const currentTime = new Date();
       const date = currentTime.getDate();
@@ -58,9 +68,9 @@ document.getElementById('donate-btn-fani')
       const formateDateTime = `
       Date: ${date}/${month}/${year} Time: ${time}
       `;
-      history.innerHTML += `
+      history2.innerHTML += `
       <div class=" text-center border bg-green-200 p-3 rounded-2xl shadow-lg mb-2">
-      <h3 class="text-center text-2xl font-bold">Successfully Added a Money</h3>
+      <h3 class="text-center text-2xl font-bold">Successfully Donate for Money at Feni</h3>
         <p class=" text-center py-1"> Donate Amount:${addMoneyFani} New Amount:${newDonateAmountFani}</p>
         <p>${formateDateTime}</p>
       </div>
@@ -75,6 +85,7 @@ document.getElementById('quta-btn')
 
         const quataInput = getInputById('quta-amount-filed');
         const quataAmount = getInputByText('total-quata-amount');
+        const history3 = document.getElementById('history-container');
 
         if(isNaN(quataInput)){
             alert('Failed to add money');
@@ -86,6 +97,25 @@ document.getElementById('quta-btn')
         }
         const newQutaAmount = quataInput + quataAmount;
         document.getElementById('total-quata-amount').innerText = newQutaAmount;
+
+        // -----------------------------data-----------------
+        const currentTime = new Date();
+        const date = currentTime.getDate();
+        const month = currentTime.getMonth() + 1;
+        const year = currentTime.getFullYear();
+        // -------------time----------------
+        const time = new Date().toLocaleTimeString();
+
+        const formateDateTime = `
+        Date: ${date}/${month}/${year} Time: ${time}
+        `;
+        history3.innerHTML += `
+        <div class=" text-center bg-green-200 p-3 rounded-2xl shadow-lg mb-2">
+        <h3 class="text-center text-2xl font-bold">Successfully Donate for Money at Quata</h3>
+        <p class=" text-center py-1"> Donate Amount: ${quataInput} New Amount: ${newQutaAmount}</p>
+        <p>${formateDateTime}</p>
+        </div>
+        `;
 })
 // ---------------------------------------------------------------------
 
@@ -101,3 +131,6 @@ document.getElementById('button-history')
 })
 
 // ------------------
+document.getElementById('blog-btn').addEventListener('click', function(){
+    window.location.href = "./blog.html";
+})
