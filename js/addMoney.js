@@ -28,6 +28,7 @@ document.getElementById('donate-btn-fani')
 
         const addMoneyFani = getInputById('donate-amount-filed-fani');
         const totalDonateFani = getInputByText('total-donate-fani');
+        const history = document.getElementById('history-container');
 
         if(isNaN(addMoneyFani)){
             alert('Failed to add money');
@@ -46,10 +47,24 @@ document.getElementById('donate-btn-fani')
             <h3 class="text-center text-2xl font-bold">Successfully Added a Money</h3>
             <p class="text-center">Donate This Money:${addMoneyFani} New Balance: ${newDonateAmountFani}</p>
         `
-        document.getElementById('history-container').appendChild(div);
-        // const p = document.createElement('p');
-        // p.innerText = `Added :${addMoneyFani} New Balance : ${newDonateAmountFani}`;
-        // document.getElementById('history-container').appendChild(p);
+    // -----------------------------data-----------------
+      const currentTime = new Date();
+      const date = currentTime.getDate();
+      const month = currentTime.getMonth() + 1;
+      const year = currentTime.getFullYear();
+    //  -------------time----------------
+      const time = new Date().toLocaleTimeString();
+
+      const formateDateTime = `
+      Date: ${date}/${month}/${year} Time: ${time}
+      `;
+      history.innerHTML += `
+      <div class=" text-center border bg-green-200 p-3 rounded-2xl shadow-lg mb-2">
+      <h3 class="text-center text-2xl font-bold">Successfully Added a Money</h3>
+        <p class=" text-center py-1"> Donate Amount:${addMoneyFani} New Amount:${newDonateAmountFani}</p>
+        <p>${formateDateTime}</p>
+      </div>
+      `;
 })
 
 // -----------------------------------------3----------------------------------------
