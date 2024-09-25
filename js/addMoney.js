@@ -14,6 +14,11 @@ document.getElementById('donate-btn')
             alert('Not Have Enough Balance');
             return;
         }
+        else{
+            document.getElementById('my_modal_1').addEventListener('click',function(){
+                showModal();
+            })
+        }
         const newDonateAmount = addMoney + totalDonate;
         document.getElementById('total-donate-amount').innerText = newDonateAmount;
        
@@ -53,6 +58,11 @@ document.getElementById('donate-btn-fani')
         if(addMoneyFani >= totalDonateFani){
             alert('Not Have Enough Balance');
             return;
+        }
+        else{
+            document.getElementById('my_modal_2').addEventListener('click',function(){
+                showModal();
+            })
         }
         const newDonateAmountFani = addMoneyFani + totalDonateFani;
         document.getElementById('total-donate-fani').innerText = newDonateAmountFani;
@@ -94,6 +104,11 @@ document.getElementById('quta-btn')
         if(quataInput >= quataAmount){
             alert('Not Have Enough Balance');
             return;
+        }
+        else{
+            document.getElementById('my_modal_3').addEventListener('click',function(){
+                showModal();
+            })
         }
         const newQutaAmount = quataInput + quataAmount;
         document.getElementById('total-quata-amount').innerText = newQutaAmount;
